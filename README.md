@@ -84,6 +84,17 @@ with:
   dockerfile: MyDockerFileName
 ```
 
+### shmsize
+Use `shmsize` when you would like to explicitly build with a custom shm size.  
+
+```yaml
+with:
+  name: myDocker/repository
+  username: ${{ secrets.DOCKER_USERNAME }}
+  password: ${{ secrets.DOCKER_PASSWORD }}
+  shmsize: 256m
+```
+
 ### workdir
 Use `workdir` when you would like to change the directory for building.
 

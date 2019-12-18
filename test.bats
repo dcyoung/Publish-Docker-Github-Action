@@ -17,6 +17,7 @@ teardown() {
   unset INPUT_TAG_NAMES
   unset INPUT_SNAPSHOT
   unset INPUT_DOCKERFILE
+  unset INPUT_SHMSIZE
   unset INPUT_REGISTRY
   unset INPUT_CACHE
   unset GITHUB_SHA

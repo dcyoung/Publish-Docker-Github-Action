@@ -23,6 +23,9 @@ inputs:
   dockerfile:
     description: 'Use dockerfile when you would like to explicitly build a Dockerfile'
     required: false
+  shmsize:
+    description: 'Use custom shm size when building the image'
+    required: false
   workdir:
     description: 'Use workdir when you would like to change the directory for building'
     required: false

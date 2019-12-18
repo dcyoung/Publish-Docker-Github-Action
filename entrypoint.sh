@@ -28,6 +28,9 @@ function main() {
   if uses "${INPUT_DOCKERFILE}"; then
     useCustomDockerfile
   fi
+  if uses "${INPUT_SHMSIZE}"; then
+    useCustomShmSize
+  fi
   if uses "${INPUT_BUILDARGS}"; then
     addBuildArgs
   fi
@@ -97,6 +100,10 @@ function isPullRequest() {
 
 function changeWorkingDirectory() {
   cd "${INPUT_WORKDIR}"
+}
+
+function useCustomShmSize() {
+  BUILDPARAMS="$BUILDPARAMS --shm-size=${INPUT_SHMSIZE}"
 }
 
 function useCustomDockerfile() {
